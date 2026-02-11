@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBD Outdoors | Hunt · Fish · Explore</title>
+  <meta name="description" content="BBD Outdoors - Hunting, fishing, and outdoor content & merch. Turkey, deer, duck, geese, and more.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@400;500;600;700;800&family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <img src="logo.svg" alt="BBD Outdoors" class="loader-logo">
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <header id="header" class="header">
+    <nav>
+      <a href="#home" class="nav-logo">
+        <img src="logo.svg" alt="BBD Outdoors" class="nav-logo-img">
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#merch">Merch</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="logo.svg" alt="BBD Outdoors Logo" class="hero-logo">
+      <div class="hero-divider"></div>
+      <p class="hero-tagline">Hunt · Fish · Explore</p>
+      <div class="hero-cta">
+        <a href="#merch" class="btn btn-primary">Shop Merch</a>
+        <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener" class="btn btn-outline">Follow Us</a>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do - Species/Activity Icons -->
+  <section class="species-bar">
+    <div class="container">
+      <div class="species-grid reveal">
+        <div class="species-item">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none"><path d="M20 5 L20 20 M20 20 L12 32 M20 20 L28 32 M20 20 L20 35" stroke="#C4953A" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <span>Turkey</span>
+        </div>
+        <div class="species-item">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none"><path d="M14 12 L14 20 L10 8 M14 15 L9 10" stroke="#C4953A" stroke-width="2" stroke-linecap="round"/><path d="M26 12 L26 20 L30 8 M26 15 L31 10" stroke="#C4953A" stroke-width="2" stroke-linecap="round"/><ellipse cx="20" cy="26" rx="8" ry="10" stroke="#C4953A" stroke-width="2" fill="none"/></svg>
+          <span>Whitetail</span>
+        </div>
+        <div class="species-item">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none"><path d="M8 18 Q14 12 20 16 Q26 12 32 18 Q26 15 20 18 Q14 15 8 18" fill="#C4953A"/><path d="M10 22 Q16 16 22 20 Q28 16 34 22 Q28 19 22 22 Q16 19 10 22" fill="#C4953A" opacity="0.6"/></svg>
+          <span>Waterfowl</span>
+        </div>
+        <div class="species-item">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none"><path d="M6 22 Q10 16 18 18 L32 14 L34 16 L22 22 Q18 28 10 28 Q6 28 6 22Z" stroke="#C4953A" stroke-width="2" fill="none"/><circle cx="30" cy="15" r="1.5" fill="#C4953A"/></svg>
+          <span>Fishing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">About BBD Outdoors</h2>
+      <div class="about-grid">
+        <div class="about-text reveal reveal-left">
+          <p class="lead">Built in the field. Driven by the outdoors.</p>
+          <p>BBD Outdoors is an outdoor hunting and fishing content brand. From chasing gobblers at dawn to sitting in a deer stand at dusk, from duck blinds to the river bank — we live for every season and every species.</p>
+          <p>We create real content from real hunts and share the lifestyle with a community that gets it. Whether it's turkey, whitetail, waterfowl, or tight lines — BBD Outdoors is your crew.</p>
+        </div>
+        <div class="about-stats reveal reveal-right">
+          <div class="stat">
+            <span class="stat-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="6" y="8" width="28" height="20" rx="0" stroke="#C4953A" stroke-width="2.5"/><polygon points="16,14 16,22 24,18" fill="#C4953A"/><line x1="15" y1="32" x2="25" y2="32" stroke="#C4953A" stroke-width="2.5" stroke-linecap="round"/><line x1="20" y1="28" x2="20" y2="32" stroke="#C4953A" stroke-width="2.5"/></svg>
+            </span>
+            <span class="stat-label">Original Content</span>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="12" stroke="#C4953A" stroke-width="2"/><line x1="20" y1="6" x2="20" y2="12" stroke="#C4953A" stroke-width="1.5"/><line x1="20" y1="28" x2="20" y2="34" stroke="#C4953A" stroke-width="1.5"/><line x1="6" y1="20" x2="12" y2="20" stroke="#C4953A" stroke-width="1.5"/><line x1="28" y1="20" x2="34" y2="20" stroke="#C4953A" stroke-width="1.5"/></svg>
+            </span>
+            <span class="stat-label">Every Season</span>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="15" r="7" stroke="#C4953A" stroke-width="2.5"/><path d="M8 35 Q8 25 20 25 Q32 25 32 35" stroke="#C4953A" stroke-width="2.5" fill="none"/></svg>
+            </span>
+            <span class="stat-label">Community Driven</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Feed / Gallery -->
+  <section id="gallery" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title reveal">From the Field</h2>
+      <p class="section-subtitle reveal">Latest from <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener">@officialbbdoutdoors</a></p>
+
+      <!-- Feed Image Grid -->
+      <div class="feed-showcase reveal">
+        <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener" class="feed-image-wrap">
+          <img src="feed-grid.png" alt="BBD Outdoors Instagram Feed - Turkey, Whitetail, Coyote, Duck, and more" class="feed-image">
+          <div class="feed-overlay">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="10" stroke="#f7f6f4" stroke-width="3" fill="none"/><circle cx="24" cy="24" r="10" stroke="#f7f6f4" stroke-width="3" fill="none"/><circle cx="36" cy="12" r="2.5" fill="#f7f6f4"/></svg>
+            <span>View on Instagram</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Category tags beneath the feed -->
+      <div class="ig-tags reveal">
+        <span class="ig-tag">Turkey</span>
+        <span class="ig-tag">Whitetail</span>
+        <span class="ig-tag">Waterfowl</span>
+        <span class="ig-tag">Predator</span>
+        <span class="ig-tag">Fishing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote / Banner -->
+  <section class="banner">
+    <div class="banner-grain"></div>
+    <div class="container">
+      <blockquote class="reveal">
+        "If it flies, it dies. If it swims, we're in. If it runs, we're after it."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Merch -->
+  <section id="merch" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Merch</h2>
+      <p class="section-subtitle reveal">Rep the brand in the woods and on the streets.</p>
+      <div class="merch-grid">
+        <div class="merch-card reveal">
+          <div class="merch-img-placeholder">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><path d="M20 25 L25 15 L35 12 L40 10 L45 12 L55 15 L60 25 L60 60 L20 60 Z" stroke="#C4953A" stroke-width="2" fill="none"/><path d="M32 15 Q40 22 48 15" stroke="#C4953A" stroke-width="1.5" fill="none"/><line x1="40" y1="25" x2="40" y2="45" stroke="#C4953A" stroke-width="1.5"/></svg>
+          </div>
+          <h3>Tees</h3>
+          <p>Premium cotton tees with original BBD designs.</p>
+          <span class="merch-price">Coming Soon</span>
+        </div>
+        <div class="merch-card reveal">
+          <div class="merch-img-placeholder">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><path d="M22 35 Q22 18 40 18 Q58 18 58 35 L58 40 L22 40 Z" stroke="#C4953A" stroke-width="2" fill="none"/><line x1="15" y1="40" x2="65" y2="40" stroke="#C4953A" stroke-width="2.5" stroke-linecap="round"/><path d="M25 40 Q25 48 40 48 Q55 48 55 40" stroke="#C4953A" stroke-width="1.5" fill="none"/></svg>
+          </div>
+          <h3>Hats</h3>
+          <p>Snapbacks and dad hats built for the field.</p>
+          <span class="merch-price">Coming Soon</span>
+        </div>
+        <div class="merch-card reveal">
+          <div class="merch-img-placeholder">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><path d="M20 20 L25 10 L35 8 L40 6 L45 8 L55 10 L60 20 L65 40 L60 60 L55 62 L25 62 L20 60 L15 40 Z" stroke="#C4953A" stroke-width="2" fill="none"/><path d="M32 10 Q40 18 48 10" stroke="#C4953A" stroke-width="1.5" fill="none"/><line x1="40" y1="22" x2="40" y2="42" stroke="#C4953A" stroke-width="1.5"/><path d="M30 60 L30 70 M50 60 L50 70" stroke="#C4953A" stroke-width="2"/></svg>
+          </div>
+          <h3>Hoodies</h3>
+          <p>Heavyweight hoodies for cold mornings in the blind.</p>
+          <span class="merch-price">Coming Soon</span>
+        </div>
+        <div class="merch-card reveal">
+          <div class="merch-img-placeholder">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="15" y="20" width="50" height="40" rx="0" stroke="#C4953A" stroke-width="2" fill="none"/><circle cx="40" cy="40" r="12" stroke="#C4953A" stroke-width="1.5" fill="none"/><text x="40" y="45" text-anchor="middle" fill="#C4953A" font-size="12" font-weight="bold" font-family="sans-serif">BBD</text></svg>
+          </div>
+          <h3>Stickers & More</h3>
+          <p>Decals, koozies, and accessories.</p>
+          <span class="merch-price">Coming Soon</span>
+        </div>
+      </div>
+      <div class="merch-cta reveal">
+        <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener" class="btn btn-primary">DM to Order</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / Social CTA -->
+  <section id="content" class="section section-dark">
+    <div class="container">
+      <div class="content-grid">
+        <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener" class="content-card content-card-dark reveal">
+          <div class="content-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="10" stroke="#C4953A" stroke-width="3" fill="none"/><circle cx="24" cy="24" r="10" stroke="#C4953A" stroke-width="3" fill="none"/><circle cx="36" cy="12" r="2.5" fill="#C4953A"/></svg>
+          </div>
+          <h3>Instagram</h3>
+          <p>@officialbbdoutdoors</p>
+          <span class="content-link">Follow Us <span class="arrow">&rarr;</span></span>
+        </a>
+        <div class="content-card content-card-dark content-highlight reveal">
+          <div class="content-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M8 10 L24 24 L40 10" stroke="#C4953A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="8" width="36" height="30" rx="0" stroke="#C4953A" stroke-width="3" fill="none"/></svg>
+          </div>
+          <h3>Stay Updated</h3>
+          <p>New drops, hunts, and content delivered to you.</p>
+          <form class="email-form" onsubmit="handleSubscribe(event)">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Get in Touch</h2>
+      <p class="section-subtitle reveal">Collabs, questions, or just want to talk about the outdoors? Hit us up.</p>
+      <div class="contact-methods reveal">
+        <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener" class="contact-item">
+          <svg width="32" height="32" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="10" stroke="currentColor" stroke-width="3" fill="none"/><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="3" fill="none"/><circle cx="36" cy="12" r="2.5" fill="currentColor"/></svg>
+          <span>@officialbbdoutdoors</span>
+        </a>
+        <a href="mailto:info@bbdoutdoors.com" class="contact-item">
+          <svg width="32" height="32" viewBox="0 0 48 48" fill="none"><path d="M8 10 L24 24 L40 10" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="8" width="36" height="30" rx="0" stroke="currentColor" stroke-width="3" fill="none"/></svg>
+          <span>info@bbdoutdoors.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <img src="logo.svg" alt="BBD Outdoors" class="footer-logo">
+      <p>&copy; 2026 BBD Outdoors. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Instagram Embed Script -->
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
