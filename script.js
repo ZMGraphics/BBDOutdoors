@@ -5,34 +5,40 @@
 // ---- Loading Screen ----
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
-  setTimeout(() => {
-    loader.classList.add('loaded');
-  }, 1200);
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add('loaded');
+    }, 1200);
+  }
 });
 
 // ---- Mobile Navigation Toggle ----
 const toggle = document.querySelector('.mobile-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('active');
-  navLinks.classList.toggle('open');
-});
-
-// Close mobile menu on link click
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    toggle.classList.remove('active');
-    navLinks.classList.remove('open');
+if (toggle && navLinks) {
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
   });
-});
 
-// ---- Smooth Scrolling ----
+  // Close mobile menu on link click
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      toggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+}
+
+// ---- Smooth Scrolling (same-page hash links only) ----
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
+    const href = link.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
     if (target) {
+      e.preventDefault();
       const headerHeight = document.getElementById('header').offsetHeight;
       const targetPos = target.getBoundingClientRect().top + window.scrollY - headerHeight;
       window.scrollTo({ top: targetPos, behavior: 'smooth' });
@@ -40,7 +46,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// ---- Auto-hide Header on Scroll (Spring Legion / First Lite pattern) ----
+// ---- Auto-hide Header on Scroll ----
 const header = document.getElementById('header');
 let lastScrollY = 0;
 let ticking = false;
@@ -49,10 +55,8 @@ function updateHeader() {
   const currentScrollY = window.scrollY;
 
   if (currentScrollY > lastScrollY && currentScrollY > 100) {
-    // Scrolling down - hide
     header.classList.add('header--hidden');
   } else {
-    // Scrolling up - show
     header.classList.remove('header--hidden');
   }
 
@@ -60,12 +64,14 @@ function updateHeader() {
   ticking = false;
 }
 
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    requestAnimationFrame(updateHeader);
-    ticking = true;
-  }
-});
+if (header) {
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  });
+}
 
 // ---- Scroll Progress Bar ----
 const scrollProgress = document.getElementById('scrollProgress');
@@ -74,24 +80,26 @@ function updateScrollProgress() {
   const scrollTop = window.scrollY;
   const docHeight = document.documentElement.scrollHeight - window.innerHeight;
   const scrollPercent = (scrollTop / docHeight) * 100;
-  scrollProgress.style.width = scrollPercent + '%';
+  if (scrollProgress) scrollProgress.style.width = scrollPercent + '%';
 }
 
 window.addEventListener('scroll', updateScrollProgress);
 
-// ---- Subtle Parallax on Hero Background ----
+// ---- Subtle Parallax on Hero Background (home page only) ----
 const heroBg = document.getElementById('heroBg');
 
-function updateParallax() {
-  if (window.scrollY < window.innerHeight) {
-    const offset = window.scrollY * 0.3;
-    heroBg.style.transform = `translateY(${offset}px) scale(1.05)`;
+if (heroBg) {
+  function updateParallax() {
+    if (window.scrollY < window.innerHeight) {
+      const offset = window.scrollY * 0.3;
+      heroBg.style.transform = `translateY(${offset}px) scale(1.05)`;
+    }
   }
-}
 
-window.addEventListener('scroll', () => {
-  requestAnimationFrame(updateParallax);
-});
+  window.addEventListener('scroll', () => {
+    requestAnimationFrame(updateParallax);
+  });
+}
 
 // ---- Scroll Reveal (IntersectionObserver) ----
 const reveals = document.querySelectorAll('.reveal');
@@ -115,16 +123,15 @@ function handleSubscribe(e) {
   e.preventDefault();
   const input = e.target.querySelector('input');
   const btn = e.target.querySelector('button');
-  const email = input.value;
+  const originalText = btn.textContent;
+  input.value = '';
 
-  // Visual feedback
   btn.textContent = 'Joined!';
   btn.style.background = '#4a7c2e';
   btn.style.borderColor = '#4a7c2e';
-  input.value = '';
 
   setTimeout(() => {
-    btn.textContent = 'Join';
+    btn.textContent = originalText;
     btn.style.background = '';
     btn.style.borderColor = '';
   }, 3000);

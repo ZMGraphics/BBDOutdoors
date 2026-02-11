@@ -255,6 +255,14 @@ nav {
   width: 100%;
 }
 
+.nav-links a.active {
+  color: var(--accent);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
 /* Mobile toggle */
 .mobile-toggle {
   display: none;
@@ -643,9 +651,9 @@ nav {
 /* ---- Content / Social ---- */
 .content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-width: 700px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -893,9 +901,26 @@ footer p {
     grid-template-columns: 1fr;
   }
 
+  .yt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-methods-page {
+    grid-template-columns: 1fr;
+  }
+
   .contact-methods {
     flex-direction: column;
     align-items: center;
+  }
+
+  .email-form-lg {
+    flex-direction: column;
+  }
+
+  .email-form-lg input {
+    border-right: 1px solid rgba(196, 149, 58, 0.2);
+    border-bottom: none;
   }
 
   .footer-inner {
@@ -1050,6 +1075,202 @@ footer p {
 .section-dark .email-form input:focus {
   border-color: var(--accent);
   background: rgba(247, 246, 244, 0.1);
+}
+
+/* ---- Page Header (inner pages) ---- */
+.page-header {
+  position: relative;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.page-header-bg {
+  position: absolute;
+  inset: 0;
+  background: url('hero-duck.png') center 20% / cover no-repeat;
+  filter: brightness(0.4) saturate(0.7);
+}
+
+.page-header-content {
+  position: relative;
+  z-index: 3;
+  padding: 2rem;
+}
+
+.page-header-content h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--text);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.page-header-sub {
+  font-family: var(--font-script);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  color: var(--accent);
+}
+
+/* ---- About Teaser (home) ---- */
+.about-teaser {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+  color: #5a5549;
+  line-height: 1.8;
+}
+
+/* ---- YouTube Grid ---- */
+.yt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.yt-embed {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.yt-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.yt-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yt-placeholder a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--muted);
+  transition: color 0.3s var(--ease);
+}
+
+.yt-placeholder a:hover {
+  color: var(--accent);
+}
+
+.yt-placeholder a:hover svg {
+  transform: scale(1.1);
+  transition: transform 0.3s var(--ease);
+}
+
+.yt-placeholder span {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.yt-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* ---- Contact Page Cards ---- */
+.contact-methods-page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: rgba(196, 149, 58, 0.04);
+  border: 1px solid var(--border);
+  transition: all 0.4s var(--ease);
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  background: rgba(196, 149, 58, 0.08);
+}
+
+.contact-card-icon {
+  margin-bottom: 1.25rem;
+}
+
+.contact-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card .content-link {
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+/* ---- Newsletter (contact page) ---- */
+.newsletter-wrap {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.email-form-lg {
+  display: flex;
+  gap: 0;
+}
+
+.email-form-lg input {
+  flex: 1;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  background: rgba(247, 246, 244, 0.06);
+  color: var(--text);
+  border: 1px solid rgba(196, 149, 58, 0.2);
+  border-right: none;
+  font-family: 'Saira', sans-serif;
+  outline: none;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+.email-form-lg input:focus {
+  border-color: var(--accent);
+  background: rgba(247, 246, 244, 0.1);
+}
+
+.email-form-lg .btn {
+  white-space: nowrap;
 }
 
 /* ---- Responsive additions ---- */

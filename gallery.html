@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | BBD Outdoors</title>
+  <meta name="description" content="BBD Outdoors gallery - Photos and videos from the field. Instagram and YouTube content.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Sacramento&family=Saira+Condensed:wght@400;500;600;700;800&family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <img src="logo.svg" alt="BBD Outdoors" class="loader-logo">
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <header id="header" class="header">
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="logo.svg" alt="BBD Outdoors" class="nav-logo-img">
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-bg"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-overlay"></div>
+    <div class="page-header-content">
+      <h1>From the Field</h1>
+      <p class="page-header-sub">Real hunts. Real content. No script.</p>
+    </div>
+  </section>
+
+  <!-- Instagram Section -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title reveal">Instagram</h2>
+      <p class="section-subtitle reveal">Latest from <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener">@officialbbdoutdoors</a></p>
+
+      <div class="feed-showcase reveal">
+        <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener" class="feed-image-wrap">
+          <img src="feed-grid.png" alt="BBD Outdoors Instagram Feed - Turkey, Whitetail, Coyote, Duck, and more" class="feed-image">
+          <div class="feed-overlay">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="10" stroke="#f7f6f4" stroke-width="3" fill="none"/><circle cx="24" cy="24" r="10" stroke="#f7f6f4" stroke-width="3" fill="none"/><circle cx="36" cy="12" r="2.5" fill="#f7f6f4"/></svg>
+            <span>View on Instagram</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="ig-tags reveal">
+        <span class="ig-tag">Turkey</span>
+        <span class="ig-tag">Whitetail</span>
+        <span class="ig-tag">Waterfowl</span>
+        <span class="ig-tag">Predator</span>
+        <span class="ig-tag">Fishing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title reveal">YouTube</h2>
+      <p class="section-subtitle reveal">Watch the latest from <a href="https://www.youtube.com/@BBDOutdoors" target="_blank" rel="noopener">BBD Outdoors</a></p>
+
+      <div class="yt-grid reveal">
+        <div class="yt-embed">
+          <div class="yt-placeholder">
+            <a href="https://www.youtube.com/@BBDOutdoors" target="_blank" rel="noopener">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <rect x="4" y="12" width="56" height="40" rx="10" stroke="#C4953A" stroke-width="3" fill="none"/>
+                <polygon points="26,22 26,42 44,32" fill="#C4953A"/>
+              </svg>
+              <span>Latest Video</span>
+            </a>
+          </div>
+        </div>
+        <div class="yt-embed">
+          <div class="yt-placeholder">
+            <a href="https://www.youtube.com/@BBDOutdoors" target="_blank" rel="noopener">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <rect x="4" y="12" width="56" height="40" rx="10" stroke="#C4953A" stroke-width="3" fill="none"/>
+                <polygon points="26,22 26,42 44,32" fill="#C4953A"/>
+              </svg>
+              <span>Featured Video</span>
+            </a>
+          </div>
+        </div>
+        <div class="yt-embed">
+          <div class="yt-placeholder">
+            <a href="https://www.youtube.com/@BBDOutdoors" target="_blank" rel="noopener">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <rect x="4" y="12" width="56" height="40" rx="10" stroke="#C4953A" stroke-width="3" fill="none"/>
+                <polygon points="26,22 26,42 44,32" fill="#C4953A"/>
+              </svg>
+              <span>Popular Video</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="yt-cta reveal">
+        <a href="https://www.youtube.com/@BBDOutdoors" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 48 48" fill="none" style="vertical-align:middle;margin-right:8px;"><rect x="4" y="8" width="40" height="32" rx="8" stroke="currentColor" stroke-width="3" fill="none"/><polygon points="20,16 20,32 34,24" fill="currentColor"/></svg>
+          Subscribe on YouTube
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <img src="logo.svg" alt="BBD Outdoors" class="footer-logo">
+      <p>&copy; 2026 BBD Outdoors. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@BBDOutdoors" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

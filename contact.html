@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | BBD Outdoors</title>
+  <meta name="description" content="Get in touch with BBD Outdoors - Collabs, questions, or just want to talk about the outdoors.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Sacramento&family=Saira+Condensed:wght@400;500;600;700;800&family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <img src="logo.svg" alt="BBD Outdoors" class="loader-logo">
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <header id="header" class="header">
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <img src="logo.svg" alt="BBD Outdoors" class="nav-logo-img">
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-bg"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-overlay"></div>
+    <div class="page-header-content">
+      <h1>Get in Touch</h1>
+      <p class="page-header-sub">Collabs, questions, or just want to talk outdoors.</p>
+    </div>
+  </section>
+
+  <!-- Contact Methods -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-methods-page reveal">
+        <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="10" stroke="#C4953A" stroke-width="3" fill="none"/><circle cx="24" cy="24" r="10" stroke="#C4953A" stroke-width="3" fill="none"/><circle cx="36" cy="12" r="2.5" fill="#C4953A"/></svg>
+          </div>
+          <h3>Instagram</h3>
+          <p>@officialbbdoutdoors</p>
+          <span class="content-link">Message Us <span class="arrow">&rarr;</span></span>
+        </a>
+        <a href="https://www.youtube.com/@BBDOutdoors" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="32" rx="8" stroke="#C4953A" stroke-width="3" fill="none"/><polygon points="20,16 20,32 34,24" fill="#C4953A"/></svg>
+          </div>
+          <h3>YouTube</h3>
+          <p>BBD Outdoors</p>
+          <span class="content-link">Subscribe <span class="arrow">&rarr;</span></span>
+        </a>
+        <a href="mailto:info@bbdoutdoors.com" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M8 10 L24 24 L40 10" stroke="#C4953A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="8" width="36" height="30" rx="0" stroke="#C4953A" stroke-width="3" fill="none"/></svg>
+          </div>
+          <h3>Email</h3>
+          <p>info@bbdoutdoors.com</p>
+          <span class="content-link">Send Email <span class="arrow">&rarr;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title reveal">Stay Updated</h2>
+      <p class="section-subtitle reveal">New drops, hunts, and content delivered to you.</p>
+      <div class="newsletter-wrap reveal">
+        <form class="email-form email-form-lg" onsubmit="handleSubscribe(event)">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary">Join the Crew</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <img src="logo.svg" alt="BBD Outdoors" class="footer-logo">
+      <p>&copy; 2026 BBD Outdoors. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@BBDOutdoors" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
