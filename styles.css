@@ -26,6 +26,8 @@
   --border: rgba(196, 149, 58, 0.15);
   --ease: cubic-bezier(0.46, 0.01, 0.32, 1);
   --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-script: 'Sacramento', cursive;
 }
 
 * {
@@ -353,12 +355,12 @@ nav {
 }
 
 .hero-tagline {
-  font-family: 'Saira Condensed', sans-serif;
-  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
-  font-weight: 500;
+  font-family: var(--font-script);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 400;
   color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+  text-transform: none;
+  letter-spacing: 0.02em;
   margin-bottom: 2.5rem;
   animation: heroFadeIn 1s var(--ease) 0.5s both;
 }
@@ -467,10 +469,14 @@ nav {
 }
 
 .section-title {
+  font-family: var(--font-serif);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
   text-align: center;
   margin-bottom: 0.5rem;
   color: var(--text-dark);
+  text-transform: none;
+  letter-spacing: 0.02em;
 }
 
 .section-title::after {
@@ -488,9 +494,10 @@ nav {
 }
 
 .section-subtitle {
+  font-family: var(--font-script);
   text-align: center;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-bottom: 3rem;
   max-width: 550px;
   margin-left: auto;
@@ -512,8 +519,10 @@ nav {
 }
 
 .about-text .lead {
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: italic;
   color: var(--text-dark);
   margin-bottom: 1rem;
 }
@@ -604,8 +613,9 @@ nav {
 }
 
 .merch-card h3 {
-  font-family: 'Saira Condensed', sans-serif;
-  font-size: 1.15rem;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--accent);
   letter-spacing: 0.1em;
@@ -679,8 +689,9 @@ nav {
 }
 
 .content-card h3 {
-  font-family: 'Saira Condensed', sans-serif;
-  font-size: 1.15rem;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
   letter-spacing: 0.06em;
@@ -749,12 +760,12 @@ nav {
 }
 
 .banner blockquote {
-  font-family: 'Saira', sans-serif;
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   font-style: italic;
   font-weight: 400;
   color: var(--accent);
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   line-height: 1.7;
   position: relative;
@@ -869,7 +880,7 @@ footer p {
   }
 
   .hero-tagline {
-    letter-spacing: 0.1em;
+    letter-spacing: 0.01em;
   }
 
   .merch-grid {
