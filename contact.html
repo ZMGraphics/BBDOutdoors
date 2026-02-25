@@ -13,6 +13,11 @@
 </head>
 <body>
 
+  <!-- Global Grain Overlay -->
+  <div class="grain-overlay"></div>
+  <!-- Cursor Spotlight -->
+  <div class="cursor-spotlight"></div>
+
   <!-- Loading Screen -->
   <div class="loader" id="loader">
     <img src="logo.svg" alt="BBD Outdoors" class="loader-logo">
@@ -48,7 +53,7 @@
     <div class="hero-grain"></div>
     <div class="hero-overlay"></div>
     <div class="page-header-content">
-      <h1>Get in Touch</h1>
+      <h1 class="gradient-text">Get in Touch</h1>
       <p class="page-header-sub">Collabs, questions, or just want to talk outdoors.</p>
     </div>
   </section>
@@ -85,10 +90,14 @@
     </div>
   </section>
 
+  <!-- Section Transition -->
+  <div class="section-transition section-transition--light-to-dark"></div>
+
   <!-- Newsletter -->
-  <section class="section section-dark">
-    <div class="container">
-      <h2 class="section-title reveal">Stay Updated</h2>
+  <section class="section section-dark" style="position:relative;">
+    <div class="aurora-orbs"><div class="aurora-orb-third"></div></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <h2 class="section-title gradient-text reveal">Stay Updated</h2>
       <p class="section-subtitle reveal">New drops, hunts, and content delivered to you.</p>
       <div class="newsletter-wrap reveal">
         <form class="email-form email-form-lg" onsubmit="handleSubscribe(event)">

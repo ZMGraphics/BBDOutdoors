@@ -13,6 +13,11 @@
 </head>
 <body>
 
+  <!-- Global Grain Overlay -->
+  <div class="grain-overlay"></div>
+  <!-- Cursor Spotlight -->
+  <div class="cursor-spotlight"></div>
+
   <!-- Loading Screen -->
   <div class="loader" id="loader">
     <img src="logo.svg" alt="BBD Outdoors" class="loader-logo">
@@ -48,15 +53,16 @@
     <div class="hero-grain"></div>
     <div class="hero-overlay"></div>
     <div class="page-header-content">
-      <h1>From the Field</h1>
+      <h1 class="gradient-text">From the Field</h1>
       <p class="page-header-sub">Real hunts. Real content. No script.</p>
     </div>
   </section>
 
   <!-- Instagram Section -->
-  <section class="section section-dark">
-    <div class="container">
-      <h2 class="section-title reveal">Instagram</h2>
+  <section class="section section-dark" style="position:relative;">
+    <div class="aurora-orbs"><div class="aurora-orb-third"></div></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <h2 class="section-title gradient-text reveal">Instagram</h2>
       <p class="section-subtitle reveal">Latest from <a href="https://www.instagram.com/officialbbdoutdoors/" target="_blank" rel="noopener">@officialbbdoutdoors</a></p>
 
       <div class="feed-showcase reveal">
@@ -79,10 +85,13 @@
     </div>
   </section>
 
+  <!-- Section Transition -->
+  <div class="section-transition section-transition--dark-to-light"></div>
+
   <!-- YouTube Section -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title reveal">YouTube</h2>
+      <h2 class="section-title gradient-text-dark reveal">YouTube</h2>
       <p class="section-subtitle reveal">Watch the latest from <a href="https://www.youtube.com/@Officialbbdoutdoors" target="_blank" rel="noopener">BBD Outdoors</a></p>
 
       <div class="yt-grid reveal">

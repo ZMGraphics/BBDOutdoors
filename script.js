@@ -101,12 +101,21 @@ if (heroBg) {
   });
 }
 
-// ---- Scroll Reveal (IntersectionObserver) ----
+// ---- Scroll Reveal (IntersectionObserver) with stagger ----
 const reveals = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
+      // Find siblings for stagger effect
+      const parent = entry.target.parentElement;
+      const siblings = parent ? Array.from(parent.querySelectorAll(':scope > .reveal')) : [];
+      const index = siblings.indexOf(entry.target);
+
+      if (index > 0) {
+        entry.target.style.transitionDelay = (index * 0.05) + 's';
+      }
+
       entry.target.classList.add('visible');
       revealObserver.unobserve(entry.target);
     }
@@ -136,3 +145,50 @@ function handleSubscribe(e) {
     btn.style.borderColor = '';
   }, 3000);
 }
+
+// ---- Cursor Spotlight ----
+const spotlight = document.querySelector('.cursor-spotlight');
+
+if (spotlight) {
+  let mouseX = 0;
+  let mouseY = 0;
+  let rafId = null;
+
+  function updateSpotlight() {
+    spotlight.style.background = `radial-gradient(600px circle at ${mouseX}px ${mouseY}px, rgba(196, 149, 58, 0.04), transparent 60%)`;
+    rafId = null;
+  }
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    if (!spotlight.classList.contains('active')) {
+      spotlight.classList.add('active');
+    }
+
+    if (!rafId) {
+      rafId = requestAnimationFrame(updateSpotlight);
+    }
+  });
+
+  document.addEventListener('mouseleave', () => {
+    spotlight.classList.remove('active');
+  });
+}
+
+// ---- Section title ::after width animation on reveal ----
+const sectionTitles = document.querySelectorAll('.section-title');
+
+const titleObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      titleObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.5
+});
+
+sectionTitles.forEach(el => titleObserver.observe(el));
